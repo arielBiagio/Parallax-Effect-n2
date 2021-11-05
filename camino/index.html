@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralaje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section>
+       <img src="images/bg.jpg" id="bg" alt="">
+       <img src="images/moon.png" id="moon" alt="">
+       <img src="images/mountain.png" id="mountain" alt="">
+       <img src="images/road.png" id="road" alt="">
+       <h2 id="text">Moon Light</h2>
+   </section> 
+
+   <div class="sec">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi perspiciatis a commodi consequatur dolorum eligendi explicabo quidem nihil illo porro, incidunt doloremque. Assumenda, non quas. Excepturi explicabo ipsam eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolorum amet tempore blanditiis harum ea aliquid odio similique adipisci voluptate itaque eius eaque ducimus quia, iusto quae voluptatem qui vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni exercitationem amet explicabo soluta, fugit earum quam iure cum optio minus debitis id accusantium velit itaque corporis quasi beatae. Veritatis, fugit! <br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum deleniti quae nulla accusantium commodi placeat perspiciatis, autem dolorum labore sunt facere illum aliquam hic blanditiis provident? Molestiae, labore explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sit eveniet deserunt doloribus, neque enim, expedita facilis quibusdam, dolor animi tempora tenetur! Officiis nemo saepe sapiente eos, dolorum corrupti! Est! <br><br></p>
+   </div>
+
+
+   <script>
+       const bg = document.getElementById('bg')
+       const moon = document.getElementById('moon')
+       const mountain = document.getElementById('mountain')
+       const road = document.getElementById('road')
+       const text = document.getElementById('text')
+
+       window.addEventListener('scroll', function(){
+           let value = window.scrollY
+
+           bg.style.top = value *0.5 + 'px'
+           moon.style.left = -value *0.5 + 'px'
+           mountain.style.top = -value *0.15 + 'px'
+           road.style.top = value *0.15 + 'px'
+           text.style.top = value *1 + 'px'
+       })
+   </script>
+</body>
+</html>
